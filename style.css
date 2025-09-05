@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  transition: background 0.5s;
+}
+
+
+body:hover {
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+}
+
+h1 {
+  color: #00fff7;
+  text-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 110px);
+  grid-gap: 12px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+#board:hover {
+  transform: scale(1.05);
+}
+
+
+.cell {
+  width: 110px;
+  height: 110px;
+  border: 2px solid #00fff7;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+
+.cell:hover {
+  background: rgba(0, 255, 247, 0.1);
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #00fff7;
+}
+
+
+.cell.X {
+  color: #ff4b5c;
+  text-shadow: 0 0 10px #ff4b5c, 0 0 20px #ff1e56;
+}
+.cell.O {
+  color: #3ae374;
+  text-shadow: 0 0 10px #3ae374, 0 0 20px #2ecc71;
+}
+
+
+#status {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 10px;
+  text-shadow: 0 0 8px #00fff7;
+  transition: transform 0.3s;
+}
+
+
+#status:hover {
+  transform: scale(1.1);
+  color: #ffdd57;
+  text-shadow: 0 0 15px #ffdd57;
+}
+
+
+#resetBtn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  background: #00fff7;
+  color: #000;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+#resetBtn:hover {
+  transform: scale
